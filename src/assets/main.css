@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(fonts/ibm-plex-sans-regular.woff2) format('woff2');
+}
+
+@layer components {
+  .bg-primary-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary text-white;
+  }
+
+  .btn {
+    @apply rounded-md px-3 py-2 transition duration-300 ease-in-out hover:ring-4 focus:ring-4;
+  }
+  .btn-primary {
+    @apply bg-primary-gradient hover:bg-white hover:from-inherit hover:text-primary;
+  }
+
+  .btn-primary-inactive {
+    @apply text-primary bg-white hover:bg-primary-gradient;
+  }
+
+  .text-primary-gradient {
+    @apply text-transparent bg-clip-text bg-primary-gradient;
+  }
+  .transition-primary {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
