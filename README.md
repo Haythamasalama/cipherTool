@@ -4,8 +4,8 @@
   <samp>
     Cipher Tool
     <br/>
-    Encrypt and decrypt messages in CBC mode using the Hill cipher and DES.
-    without the use of an external package to encrypt and decrypt. 
+    Encrypt And Decrypt Messages Using Hill Cipher And DES In CBC Mode. 
+    without the use of an external package to encrypt and decrypt. 
   </samp>
 </p>
 
