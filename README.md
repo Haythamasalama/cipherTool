@@ -29,7 +29,7 @@
 
 ![Home](https://user-images.githubusercontent.com/37311945/210116290-37c5f391-4f2e-4b34-af98-3c5841d3cac7.png)
 
-[Design](https://www.figma.com/file/BMuebRuw47Hoj64ZPPAMPH/my-website?node-id=2%3A2)
+[Design](https://www.figma.com/file/NoQVCS14uffHH3jJKAPapO/Untitled?node-id=107%3A23&t=MV4JUJGeVTJ1L3cU-1)
 
 ## Technologies used
 
