@@ -4,8 +4,7 @@
   <samp>
     Cipher Tool
     <br/>
-    Encrypt And Decrypt Messages Using Hill Cipher And DES In CBC Mode. 
-    without the use of an external package to encrypt and decrypt. 
+Encrypt and decrypt messages using the Hill cipher and DES in CBC mode, using Vue.js, TypeScript, and Tawillindcss, without the use of external packages for encryption and decryption.
   </samp>
 </p>
 
@@ -34,6 +33,7 @@
 ## Technologies used
 
 - Vuejs
+- Typescript
 - Tawillindcss
 
 ## Installation
