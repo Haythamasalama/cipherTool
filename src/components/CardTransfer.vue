@@ -91,7 +91,7 @@
       <!-- card from -->
       <div class="w-1/2 border-r-[1px] border-gray-200 h-[200px]">
         <textarea
-          class="border-0 outline-0 w-full p-3 text-base text-gray-400 h-full hover:ring-4 focus:ring-2 bg-transparent transition-primary"
+          class="border-0 outline-0 w-full p-3 text-base text-gray-400 h-full hover:ring-4 focus:ring-2 bg-transparent transition-primary resize-none "
           placeholder="Enter Your Text"
           v-model="model.from"
         />
@@ -100,7 +100,7 @@
       <!-- card to -->
       <div class="w-1/2">
         <textarea
-          class="border-0 outline-0 w-full p-3 text-gray-400 h-full hover:ring-4 focus:ring-2 bg-transparent transition-primary"
+          class="border-0 outline-0 w-full p-3 text-gray-400 h-full hover:ring-4 focus:ring-2 bg-transparent transition-primary resize-none "
           v-model="model.to"
           readonly
         />
