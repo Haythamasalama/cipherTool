@@ -1,15 +1,13 @@
 <script setup lang="ts">
-  interface AlgorithmMenu {
+  type AlgorithmMenu = {
     title: string;
     algorithm: string;
     selected: boolean;
   }
 
-  interface MenusProps {
-    menus: Array<AlgorithmMenu>;
-  }
-
-  const props = defineProps<MenusProps>();
+  const props = defineProps<{
+    menus: AlgorithmMenu[];
+  }>();
 
   const select = (selectedMenu: AlgorithmMenu) => {
     props.menus.forEach(menu => {
@@ -21,7 +19,7 @@
 <template>
   <div class="flex flex-row">
     <button
-      v-for="(menu, key) in props.menus"
+      v-for="(menu, key) in menus"
       :key="key"
       class="btn mr-2 text-xl font-medium"
       :class="`${menu.selected ? 'btn-primary' : 'btn-primary-inactive'}`"

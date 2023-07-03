@@ -3,37 +3,32 @@
   import CardTransfer from '../components/CardTransfer.vue';
   import AlgorithmMenus from '../components/AlgorithmMenus.vue';
 
-  export type AlgorithmMenu = {
-    title: string;
-    algorithm: string;
-    selected: boolean;
-  };
-
-  interface Model {
-    menus: Array<AlgorithmMenu>;
+  const model = reactive<{
+    menus: {
+      title: string;
+      algorithm: string;
+      selected: boolean;
+    }[];
     key: string;
     showKeyInput: boolean;
-  }
-
-  const model: Model = reactive({
+  }>({
     menus: [
       {
         title: 'Hill Cipher',
         algorithm: 'hillCipher',
-        selected: true,
+        selected: true
       },
       {
         title: 'DES',
         algorithm: 'des',
-        selected: false,
-      },
+        selected: false
+      }
     ],
     key: '',
-    showKeyInput: false,
+    showKeyInput: false
   });
 
-  const getSelected = (): string =>
-    model.menus.find(menu => menu.selected)?.algorithm || 'hillCipher';
+  const getSelected = () => model.menus.find((menu) => menu.selected)?.algorithm || 'hillCipher';
 </script>
 
 <template>
@@ -45,7 +40,7 @@
       :class="model.key.length > 0 ? 'btn-primary' : 'btn-primary-inactive'"
       @click="model.showKeyInput = !model.showKeyInput"
     >
-      {{ model.key.length > 0 ? 'Change Key' : 'Enter Key' }}
+      {{ model.key.length > 0 ? "Change Key" : "Enter Key" }}
       🔐
     </button>
 
@@ -61,8 +56,5 @@
   </AlgorithmMenus>
 
   <!-- card transfer  -->
-  <CardTransfer
-    :secretKey="model.key"
-    :algorithm="getSelected()"
-  />
+  <CardTransfer :secretKey="model.key" :algorithm="getSelected()" />
 </template>

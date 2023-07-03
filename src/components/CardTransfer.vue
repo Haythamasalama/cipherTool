@@ -3,40 +3,31 @@
   import IconChange from './icons/IconChange.vue';
   import { useRunnableAlgorithm } from '../composables/algorithms/runnableAlgorithm';
 
-  interface CardTransferProps {
+  const props = defineProps<{
     secretKey: string;
     algorithm: string;
-  }
+  }>();
 
-  interface CardTransferModel {
+  const model = reactive<{
     from: string;
     to: string;
     operation: 'encryption' | 'decryption';
     error: string;
-  }
-
-  interface Title {
-    from: string;
-    to: string;
-  }
-
-  const props = defineProps<CardTransferProps>();
-
-  const model: CardTransferModel = reactive({
+  }>({
     from: '',
     to: '',
     operation: 'encryption',
-    error: '',
+    error: ''
   });
 
-  const title = computed((): Title => {
+  const title = computed(() => {
     return {
       from: model.operation === 'encryption' ? 'Plain Text' : 'Cipher Text',
-      to: model.operation === 'encryption' ? 'Cipher Text' : 'Plain Text',
+      to: model.operation === 'encryption' ? 'Cipher Text' : 'Plain Text'
     };
   });
 
-  const toggleOperation = (): void => {
+  const toggleOperation = () => {
     model.from = '';
     model.to = '';
 
