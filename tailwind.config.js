@@ -19,22 +19,22 @@ module.exports = {
           600: '#1B1F24',
           700: '#333333',
           800: '#222222',
-          900: '#111111',
-        },
+          900: '#111111'
+        }
       },
       boxShadow: {
-        DEFAULT: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        DEFAULT: '0px 4px 4px rgba(0, 0, 0, 0.25)'
       },
       borderRadius: {
-        DEFAULT: '8px',
+        DEFAULT: '8px'
       },
       fontFamily: {
-        sans: ['IBM Plex Sans', ...fontFamily.sans],
+        sans: ['IBM Plex Sans', ...fontFamily.sans]
       },
       borderColor: ({ theme }) => ({
-        DEFAULT: theme('colors.gray.500'),
-      }),
-    },
+        DEFAULT: theme('colors.gray.500')
+      })
+    }
   },
-  plugins: [],
+  plugins: []
 };

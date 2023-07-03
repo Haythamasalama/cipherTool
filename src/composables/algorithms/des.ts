@@ -6,7 +6,7 @@ import {
   sBoxes,
   permutation,
   expansion,
-  finalInitialPermutation,
+  finalInitialPermutation
 } from './constantsAlgorithms';
 
 /**
@@ -137,7 +137,7 @@ const pad = (string: string): string => {
  * @returns array of string
  */
 const getSubKeys = (key: string): string[] => {
-  let subKeys: string[] = [];
+  const subKeys: string[] = [];
 
   const permutedKey: string = permute(key, permutationChoice1);
   let C0: string = rightPart(permutedKey);
@@ -167,7 +167,7 @@ const getSubKeys = (key: string): string[] => {
  * @returns
  */
 const round = (block: string, key: string): string => {
-  let xoRed = xor(permute(block, expansion), key);
+  const xoRed = xor(permute(block, expansion), key);
   let subStituted = '';
 
   for (let i = 0; i < 8; i += 1) {
