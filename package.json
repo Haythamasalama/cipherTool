@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
-    "mathjs": "^11.5.0",
+    "mathjs": "^13.0.0",
     "postcss": "^8.4.31",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
